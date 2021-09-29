@@ -37,7 +37,21 @@ function Routes() {
                     )
                 }}
             />
-            <Drawer.Screen name="Movies" component={Movies} />
+            <Drawer.Screen 
+            name="Movies" 
+            component={Movies} 
+            options={{
+                title: "Meus filmes",
+
+                drawerIcon: ({focused, size, color}) => (
+                    <MaterialCommunityIcons 
+                    name={focused ? 'archive' : 'archive-outline'}
+                    size={size} 
+                    color={color}
+                    />
+                )
+            }}
+            />
         </Drawer.Navigator>
     )
 }
